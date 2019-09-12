@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="142dp"
+        android:layout_height="143dp"
+        app:srcCompat="@android:color/background_dark"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="35dp" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="304dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="213dp" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="302dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="282dp" />
+
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="108dp"
+        android:layout_height="57dp"
+        android:text="Sign in"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="384dp" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="113dp"
+        android:layout_height="56dp"
+        android:text="Sign up"
+        tools:layout_editor_absoluteX="236dp"
+        tools:layout_editor_absoluteY="385dp" />
+
+</android.support.constraint.ConstraintLayout>
