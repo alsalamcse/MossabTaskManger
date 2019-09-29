@@ -25,7 +25,8 @@ public class SignUP extends AppCompatActivity {
         btnsave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                datahandler();
+            }
             }
     }
     private void datahandler()
