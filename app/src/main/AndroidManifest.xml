@@ -19,7 +19,8 @@
         <activity android:name=".SignIn" />
         <activity android:name=".SignUP" />
         <activity android:name=".AddTask" />
-        <activity android:name=".Sitting"></activity>
+        <activity android:name=".Sitting" />
+        <activity android:name=".TempAllTaskActivity"></activity>
     </application>
 
 </manifest>
