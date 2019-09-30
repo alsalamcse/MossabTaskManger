@@ -9,34 +9,50 @@
     <Switch
         android:id="@+id/sound"
         android:layout_width="179dp"
-        android:layout_height="42dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginBottom="57dp"
         android:text="sound"
-        tools:layout_editor_absoluteX="113dp"
-        tools:layout_editor_absoluteY="91dp" />
+        app:layout_constraintBottom_toTopOf="@+id/frontSize"
+        app:layout_constraintStart_toStartOf="@+id/frontSize"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <SeekBar
         android:id="@+id/Seekbar"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="188dp"
-        android:layout_height="32dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="88dp"
         android:max="10"
         android:progress="3"
-        tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="192dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnSave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/frontSize"
+        app:layout_constraintTop_toBottomOf="@+id/sound" />
 
     <Button
         android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="151dp"
         android:text="save"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="312dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/frontSize"
+        app:layout_constraintTop_toBottomOf="@+id/Seekbar" />
 
     <TextView
         android:id="@+id/frontSize"
-        android:layout_width="78dp"
-        android:layout_height="33dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="288dp"
         android:text="Front size"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="190dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Seekbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sound" />
 </android.support.constraint.ConstraintLayout>

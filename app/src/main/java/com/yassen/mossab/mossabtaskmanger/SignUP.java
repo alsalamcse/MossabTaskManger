@@ -1,33 +1,43 @@
 package com.yassen.mossab.mossabtaskmanger;
 
+import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class SignUP extends AppCompatActivity {
 
     private EditText edtFname,edtLname,edtPhone,edtEmail,edtPassword,edtReEnter;
-    private Button btnsave;
+    private Button btnS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        edtFname=(EditText)(findViewById(R.id.edtFname));
+        edtFname=findViewById(R.id.edtFname);
         edtLname=(EditText)(findViewById(R.id.edtLname));
         edtPhone=(EditText)(findViewById(R.id.edtPhone));
         edtEmail=(EditText)(findViewById(R.id.edtEmail));
         edtPassword=(EditText)(findViewById(R.id.edtPassword));
         edtReEnter=(EditText)(findViewById(R.id.edtReEnter));
-        btnsave=(Button)(findViewById(R.id.btnSave));
-        btnsave.setOnClickListener(new View.OnClickListener() {
+        btnS=(Button)(findViewById(R.id.btnS));
+
+        btnS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 datahandler();
             }
-            }
+            });
     }
     private void datahandler()
     {
@@ -57,8 +67,30 @@ public class SignUP extends AppCompatActivity {
         }
         if (isOk)
         {
-            //creatAcount(email,passw);
+            creatAcount(email,pass,first,name,phone);
         }
+
+    }
+
+    private void creatAcount(String email, String pass, String first, String name, String phone)
+    {
+        FirebaseAuth auth=FirebaseAuth.getInstance();
+        auth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful())
+                {
+                    Toast.makeText(SignUP.this, "Sign up succesful", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+                else
+                {
+                    edtEmail.setError("Sing n up failed");
+                }
+
+            }
+        });
+
     }
 
 }

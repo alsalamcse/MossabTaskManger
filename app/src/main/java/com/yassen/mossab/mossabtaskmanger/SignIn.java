@@ -29,6 +29,14 @@ public class SignIn extends AppCompatActivity {
         btnSignIn = (Button) (findViewById(R.id.btnSignIn));
         btnSignUp = (Button) (findViewById(R.id.btnSignUp));
 
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(),SignUP.class);
+                startActivity(i);
+            }
+        });
+
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,22 +51,22 @@ public class SignIn extends AppCompatActivity {
         String password = edtPassword.getText().toString();
         boolean isok = true;
 
-//        if (email.length() < 4)
-//        {
-//            edtEmail.setError("Email lenght error");
-//            isok = false;
-//        }
+       if (email.length() < 4)
+       {
+            edtEmail.setError("Email lenght error");
+            isok = false;
+       }
 
-//        if (email.indexOf("@") < 0 || email.indexOf(".") < 0) {
-//            edtEmail.setError("email wrong format");
-//            isok = false;
-//        }
-
-        if (isValidEmailAddress(email)==false)
-        {
-            edtEmail.setError("Invalid Email");
-            isok=false;
+        if (email.indexOf("@") < 0 || email.indexOf(".") < 0) {
+            edtEmail.setError("email wrong format");
+            isok = false;
         }
+
+//        if (isValidEmailAddress(email)==false)
+//        {
+//            edtEmail.setError("Invalid Email");
+//            isok=false;
+//        }
 
         if (password.length() < 8) {
             edtPassword.setError("password lenght error");
@@ -88,7 +96,7 @@ public class SignIn extends AppCompatActivity {
                 if (task.isSuccessful())
                 {
                     //todo go to main screen(all task activity)
-                    Intent i=new Intent(getApplication(),TempAllTaskActivity.class);
+                    Intent i=new Intent(getApplicationContext(),SignUP.class);
                     startActivity(i);
                 }
                 else

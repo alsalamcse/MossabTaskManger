@@ -10,45 +10,62 @@
         android:id="@+id/btnSave2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
         android:text="save"
-        tools:layout_editor_absoluteX="139dp"
-        tools:layout_editor_absoluteY="383dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekbar" />
 
     <EditText
         android:id="@+id/edtTitlle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="114dp"
+        android:layout_marginBottom="25dp"
         android:ems="10"
         android:hint="Tittle"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="114dp" />
+        app:layout_constraintBottom_toTopOf="@+id/edtSubject"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edtSubject"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
         android:ems="10"
         android:hint="Subject"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="185dp" />
+        app:layout_constraintBottom_toTopOf="@+id/seekbar"
+        app:layout_constraintStart_toStartOf="@+id/edtTitlle"
+        app:layout_constraintTop_toBottomOf="@+id/edtTitlle" />
 
     <SeekBar
         android:id="@+id/seekbar"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="188dp"
-        android:layout_height="37dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="51dp"
         android:max="10"
         android:progress="3"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="295dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnSave2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvPriority"
+        app:layout_constraintTop_toBottomOf="@+id/edtSubject" />
 
     <TextView
         android:id="@+id/tvPriority"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="8dp"
         android:text="priority"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="305dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/seekbar"
+        app:layout_constraintEnd_toStartOf="@+id/seekbar"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
