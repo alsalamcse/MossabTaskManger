@@ -52,6 +52,16 @@ public class AddTask extends AppCompatActivity {
             edtSubject.setError("subject lenght error");
             isOk=false;
         }
+        if (isOk)
+        {
+          createTask(title,subject,sekbar);
+        }
 
     }
+
+    private void createTask(String title, String subject, int sekbar)
+    {
+
+    }
+
 }
