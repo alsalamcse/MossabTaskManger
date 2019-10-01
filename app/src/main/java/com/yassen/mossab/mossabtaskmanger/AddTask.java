@@ -74,6 +74,10 @@ public class AddTask extends AppCompatActivity {
         //.2
         DatabaseReference reference = database.getReference();
 
+        String key = reference.child("tasks").push().getKey();
+        reference.child("tasks").child(key).setValue(t);
+
+
     }
 
     private void createTask(String title,String subject,int sekbar)
