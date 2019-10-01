@@ -8,6 +8,11 @@ import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import Data.MyTask;
+
 public class AddTask extends AppCompatActivity {
     private EditText edtTittle,edtSubject;
     private SeekBar Seekbar;
@@ -52,14 +57,26 @@ public class AddTask extends AppCompatActivity {
             edtSubject.setError("subject lenght error");
             isOk=false;
         }
-        if (isOk)
-        {
-          createTask(title,subject,sekbar);
+        if (isOk) {
+
+            MyTask t = new MyTask();
+            t.setTittle(title);
+            createTask(t);
+            createTask(title, subject, sekbar);
+
         }
+    }
+
+    private void createTask(MyTask t)
+    {
+        //.1
+        FirebaseDatabase database= FirebaseDatabase.getInstance();
+        //.2
+        DatabaseReference reference = database.getReference();
 
     }
 
-    private void createTask(String title, String subject, int sekbar)
+    private void createTask(String title,String subject,int sekbar)
     {
 
     }
