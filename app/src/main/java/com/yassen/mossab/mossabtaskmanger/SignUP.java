@@ -49,7 +49,7 @@ public class SignUP extends AppCompatActivity {
         String pass1= edtReEnter.getText().toString();
 
         boolean isOk=true;
-        if (email.length()<4 || email.indexOf("@")<0 || email.indexOf(".")<0)
+        if (email.length()<4 || email.indexOf('@')<0 || email.indexOf('.')<0)
         {
             edtEmail.setError(("wrong email"));
             isOk=false;
