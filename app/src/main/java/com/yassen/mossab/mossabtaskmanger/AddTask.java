@@ -33,7 +33,7 @@ public class AddTask extends AppCompatActivity {
         edtSubject=(EditText)(findViewById(R.id.edtSubject));
         Seekbar=(SeekBar)(findViewById(R.id.seekbar));
         tvPriority=(TextView)(findViewById(R.id.tvPriority));
-        btnSave2=(Button)(findViewById(R.id.btnSave));
+        btnSave2=(Button)(findViewById(R.id.btnSave2));
 
         btnSave2.setOnClickListener(new View.OnClickListener() {
             @Override
