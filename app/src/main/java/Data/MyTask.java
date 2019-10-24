@@ -5,12 +5,21 @@ public class MyTask
     private String Key;
     private String tittle;
     private String subject;
+    public String onwer;
     private int important;
 
     public MyTask()
     {
         //./l,m,mn,mn,mn,mfdghdfgdfg
 
+    }
+
+    public String getOnwer() {
+        return onwer;
+    }
+
+    public void setOnwer(String onwer) {
+        this.onwer = onwer;
     }
 
     public String getKey() {
