@@ -100,7 +100,6 @@ public class AddTask extends AppCompatActivity {
             }
         });
 
-
     }
 
     private void createTask(String title,String subject,int sekbar)
