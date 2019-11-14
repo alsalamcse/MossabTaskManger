@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -18,11 +19,15 @@ import com.google.firebase.database.ValueEventListener;
 import com.yassen.mossab.mossabtaskmanger.R;
 
 import Data.MyTask;
+import Data.TasksAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class AllTasksFragment extends Fragment {
+
+    private TasksAdapter tasksAdapte;
+    private ListView lvTasks;
 
 
     public AllTasksFragment() {
@@ -31,9 +36,23 @@ public class AllTasksFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             Bundle savedInstanceState)
+    {
+        tasksAdapte=new TasksAdapter(getContext());
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_all_tasks, container, false);
+        View view = inflater.inflate(R.layout.fragment_all_tasks, container, false);
+        lvTasks=view.findViewById(R.id.lstvTasks);
+
+        lvTasks.setAdapter(tasksAdapte);
+
+        return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        readTasksFromFirebase();
     }
 
     public void readTasksFromFirebase()
@@ -47,10 +66,12 @@ public class AllTasksFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
             {
+                tasksAdapte.clear();
                 for (DataSnapshot d:dataSnapshot.getChildren())
                 {
                     MyTask t=d.getValue(MyTask.class);
                     Log.d("MyTask",t.toString());
+                    tasksAdapte.add(t);
                     
                 }
             }
