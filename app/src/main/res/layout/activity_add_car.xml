@@ -60,7 +60,6 @@
         android:id="@+id/edTybe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="1dp"
         android:layout_marginBottom="82dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -98,13 +97,13 @@
         android:id="@+id/btnPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Price"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/edModel"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.437" />
 
     <ImageView
         android:id="@+id/edImage"
