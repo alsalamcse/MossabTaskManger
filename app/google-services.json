@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "404501848369",
+    "firebase_url": "https://mossabtaskmanger.firebaseio.com",
+    "project_id": "mossabtaskmanger",
+    "storage_bucket": "mossabtaskmanger.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404501848369:android:df30540a6c126320c09010",
+        "android_client_info": {
+          "package_name": "com.yassen.mossab.mossabtaskmanger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "404501848369-la45ev6vc8bf3nai3bv9bch12ta3bl4g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yassen.mossab.mossabtaskmanger",
+            "certificate_hash": "8d4e87598d212bdb282d05faa7766dc9c486dbdf"
+          }
+        },
+        {
+          "client_id": "404501848369-6370col19jgbb1isr5el35hh3tffrcgj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM5oIqNnTZA0AUaOEOhQKsymE-i-z8Y8A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "404501848369-6370col19jgbb1isr5el35hh3tffrcgj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

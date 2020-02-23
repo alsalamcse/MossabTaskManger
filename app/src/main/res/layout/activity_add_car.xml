@@ -6,89 +6,116 @@
     android:layout_height="match_parent"
     tools:context=".AddCar">
 
-    <EditText
-        android:id="@+id/edTybe"
+    <Button
+        android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Type"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="279dp" />
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="77dp"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpload" />
 
-    <EditText
-        android:id="@+id/edModel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Model"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="406dp" />
+    <Button
+        android:id="@+id/edChoose"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginEnd="23dp"
+        android:text="Choose"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnUpload"
+        app:layout_constraintEnd_toStartOf="@+id/btnUpload"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnUpload" />
 
-    <EditText
-        android:id="@+id/edColor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Color"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="466dp" />
+    <Button
+        android:id="@+id/btnUpload"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="177dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="389dp"
+        android:text="Upload"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edChoose"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edKilometerage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="159dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Kilometerage"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="527dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/edColor"
+        app:layout_constraintTop_toBottomOf="@+id/edColor" />
 
-    <ImageView
-        android:id="@+id/edImage"
+    <EditText
+        android:id="@+id/edTybe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="35dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="82dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Type"
+        app:layout_constraintBottom_toTopOf="@+id/edModel"
+        app:layout_constraintEnd_toEndOf="@+id/btnPrice"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpload" />
 
-    <Button
-        android:id="@+id/btnSave"
+    <EditText
+        android:id="@+id/edModel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"
-        tools:layout_editor_absoluteX="284dp"
-        tools:layout_editor_absoluteY="606dp" />
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Model"
+        app:layout_constraintBottom_toTopOf="@+id/edColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edTybe" />
 
-    <Button
-        android:id="@+id/edChoose"
-        android:layout_width="99dp"
-        android:layout_height="39dp"
-        android:text="Choose"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="178dp" />
-
-    <Button
-        android:id="@+id/btnUpload"
-        android:layout_width="94dp"
-        android:layout_height="40dp"
-        android:text="Upload"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="204dp"
-        tools:layout_editor_absoluteY="177dp" />
+    <EditText
+        android:id="@+id/edColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Color"
+        app:layout_constraintBottom_toTopOf="@+id/edKilometerage"
+        app:layout_constraintStart_toStartOf="@+id/edModel"
+        app:layout_constraintTop_toBottomOf="@+id/edModel" />
 
     <EditText
         android:id="@+id/btnPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Price"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/edModel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/edImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnUpload"
+        app:layout_constraintEnd_toEndOf="@+id/btnUpload"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="53dp" />
+        tools:srcCompat="@tools:sample/avatars" />
 
 </android.support.constraint.ConstraintLayout>
