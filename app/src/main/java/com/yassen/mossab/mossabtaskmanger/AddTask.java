@@ -84,6 +84,7 @@ public class AddTask extends AppCompatActivity {
         t.setOnwer(uid);
         
         String key = reference.child("tasks").push().getKey();
+        t.setKey(key);
         reference.child("tasks").child(uid).child(key).setValue(t).addOnCompleteListener(AddTask.this, new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {

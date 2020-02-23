@@ -1,6 +1,8 @@
 package Data;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -12,6 +14,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseError;
@@ -45,7 +48,7 @@ public class TasksAdapter extends ArrayAdapter<MyTask>
         TextView tvSubject=vitem.findViewById(R.id.itmTvSubject);
         RatingBar rbPrio=vitem.findViewById(R.id.itmRatingPrio);
         CheckBox cbIsCompleted=vitem.findViewById(R.id.itmChbxlsCompleted);
-        ImageView ivInfo=vitem.findViewById(R.id.itmImgInfo);
+        final ImageView ivInfo=vitem.findViewById(R.id.itmImgInfo);
 
         //getting data source
         final MyTask myTask = getItem(position);
@@ -66,15 +69,45 @@ public class TasksAdapter extends ArrayAdapter<MyTask>
                         {
                             if (databaseError==null)
                             {
+                                Toast.makeText(getContext(), "deleted", Toast.LENGTH_SHORT).show();
+                                
+                            }
 
+                            else
+                            {
+                                Toast.makeText(getContext(), "not deleted"+databaseError.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
+                    ivInfo.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v)
+                        {
+
+                        }
+
+
+
+                    });
+
                 }
+                }
+
+        });
+        ivInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Toast.makeText(getContext(), myTask.getTittle(), Toast.LENGTH_SHORT).show();
+                ShowMenu();
+
             }
         });
 
+
         //connect item view to data source
+        MyTask task=getItem(position);
         tvTitle.setText(myTask.getTittle());
         tvSubject.setText(myTask.getSubject());
         rbPrio.setRating(myTask.getImportant());
@@ -82,5 +115,40 @@ public class TasksAdapter extends ArrayAdapter<MyTask>
 
 
         return vitem;
+    }
+    public void ShowMenu(){
+
+        final String[]option={"Add","View","Select","Delete"};
+        ArrayAdapter<String>adapter=new ArrayAdapter<String>(getContext(),android.R.layout.select_dialog_item);
+        adapter.addAll(option);
+        AlertDialog.Builder builder=new AlertDialog.Builder(getContext());
+        builder.setTitle("Select option");
+        builder.setAdapter(adapter, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int i) {
+
+                if(i==0)
+                {
+                    Toast.makeText(getContext(), "Add", Toast.LENGTH_SHORT).show();
+                }
+                if (i==1)
+                {
+                    Toast.makeText(getContext(), "View", Toast.LENGTH_SHORT).show();
+                }
+                if(i==2)
+                {
+                    Toast.makeText(getContext(), "Select", Toast.LENGTH_SHORT).show();
+                }
+                if (i==3){
+                    Toast.makeText(getContext(), "Delete", Toast.LENGTH_SHORT).show();
+                }
+
+
+            }
+        });
+        final AlertDialog a=builder.create();
+        a.show();
+
+
     }
 }
