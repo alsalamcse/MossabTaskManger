@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="edPrice" type="id" />
+    <item name="edN" type="id" />
+    <item name="edNunber" type="id" />
+    <item name="btnChoose" type="id" />
 </resources>
