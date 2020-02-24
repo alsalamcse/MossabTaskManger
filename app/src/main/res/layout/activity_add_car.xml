@@ -15,10 +15,11 @@
         android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edNumber"
         app:layout_constraintTop_toBottomOf="@+id/btnUpload" />
 
     <Button
-        android:id="@+id/edChoose"
+        android:id="@+id/btnChoose"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="82dp"
@@ -41,7 +42,7 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/btnSave"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/edChoose"
+        app:layout_constraintStart_toEndOf="@+id/btnChoose"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -65,7 +66,7 @@
         android:inputType="textPersonName"
         android:text="Type"
         app:layout_constraintBottom_toTopOf="@+id/edModel"
-        app:layout_constraintEnd_toEndOf="@+id/btnPrice"
+        app:layout_constraintEnd_toEndOf="@+id/edPrice"
         app:layout_constraintTop_toBottomOf="@+id/btnUpload" />
 
     <EditText
@@ -94,7 +95,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edModel" />
 
     <EditText
-        android:id="@+id/btnPrice"
+        android:id="@+id/edPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -103,18 +104,34 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/edModel"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437" />
+        app:layout_constraintVertical_bias="0.428" />
+
+    <EditText
+        android:id="@+id/edNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="22dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Phone Number"
+        app:layout_constraintEnd_toStartOf="@+id/btnSave"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edKilometerage" />
 
     <ImageView
         android:id="@+id/edImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
-        android:layout_marginEnd="39dp"
+        android:layout_marginEnd="40dp"
         android:layout_marginBottom="14dp"
         app:layout_constraintBottom_toTopOf="@+id/btnUpload"
         app:layout_constraintEnd_toEndOf="@+id/btnUpload"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:srcCompat="@tools:sample/avatars" />
 
 </android.support.constraint.ConstraintLayout>
