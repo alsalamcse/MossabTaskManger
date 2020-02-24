@@ -26,8 +26,5 @@ public class AddCar extends AppCompatActivity {
         edColor=(EditText)(findViewById(R.id.edColor));
         edKilometerage=(EditText)(findViewById(R.id.edKilometerage));
 
-
-
-
     }
 }
