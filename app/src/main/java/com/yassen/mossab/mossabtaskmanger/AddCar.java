@@ -48,6 +48,18 @@ public class AddCar extends AppCompatActivity {
                 dataHandler();
             }
         });
+        btnUpload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        btnChoose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
 
     }
@@ -97,6 +109,9 @@ public class AddCar extends AppCompatActivity {
             car.setKilometerage(Kilometerage);
             car.setTybe(Tybe);
             car.setPhoneNumber(PhoneNumber);
+            createCar(car);
+
+
 
 
         }

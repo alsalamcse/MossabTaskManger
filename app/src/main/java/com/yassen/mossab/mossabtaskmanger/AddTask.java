@@ -36,7 +36,7 @@ public class AddTask extends AppCompatActivity {
         tvPriority=(TextView)(findViewById(R.id.tvPriority));
         btnSave2=(Button)(findViewById(R.id.btnSave2));
 
-        btnSave2.setOnClickListener(new View.OnClickListener() {
+        btnSave2.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dataHandler();
@@ -105,6 +105,7 @@ public class AddTask extends AppCompatActivity {
 
     private void createTask(String title,String subject,int sekbar)
     {
+
 
     }
 

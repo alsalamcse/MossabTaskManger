@@ -4,4 +4,12 @@
     <item name="edN" type="id" />
     <item name="edNunber" type="id" />
     <item name="btnChoose" type="id" />
+    <item name="btnUpload" type="id" />
+    <item name="edTybe" type="id" />
+    <item name="edModel" type="id" />
+    <item name="edImage" type="id" />
+    <item name="edColor" type="id" />
+    <item name="edKilometerage" type="id" />
+
+
 </resources>

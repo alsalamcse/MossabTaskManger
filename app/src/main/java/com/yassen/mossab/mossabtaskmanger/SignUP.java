@@ -85,7 +85,7 @@ public class SignUP extends AppCompatActivity {
                 }
                 else
                 {
-                    edtEmail.setError("Sing n up failed");
+                    edtEmail.setError("Sign up failed");
                 }
 
             }
