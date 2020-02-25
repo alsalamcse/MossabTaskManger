@@ -1,7 +1,7 @@
 package Data;
 
-public class MyCar
-{
+public class MyCar {
+
     private String key;
     private String Tybe;
     private String price;
@@ -10,10 +10,11 @@ public class MyCar
     private String Kilometerage;
     private String PhoneNumber;
     private String owner;
-
+    private String Adrees;
 
     public MyCar()
     {
+
     }
 
     public String getKey() {
@@ -79,4 +80,16 @@ public class MyCar
     public void setOwner(String owner) {
         this.owner = owner;
     }
+
+    public String getAdrees() {
+        return Adrees;
+    }
+
+    public void setAdrees(String adrees) {
+        Adrees = adrees;
+    }
+
+
+
+
 }

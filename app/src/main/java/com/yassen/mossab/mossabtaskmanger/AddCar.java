@@ -1,6 +1,7 @@
 package com.yassen.mossab.mossabtaskmanger;
 
 import android.arch.lifecycle.ViewModelProvider;
+import android.location.Address;
 import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -23,7 +24,7 @@ import Data.MyCar;
 public class AddCar extends AppCompatActivity {
     private ImageView edImage;
     private Button btnChoose,btnUpload,btnSave;
-    private EditText edTybe,edPrice,edModel,edColor,edKilometerage,edNumber;
+    private EditText edTybe,edPrice,edModel,edColor,edKilometerage,edNumber,edAdrees;
 
 
     @Override
@@ -41,6 +42,7 @@ public class AddCar extends AppCompatActivity {
         edColor=(EditText)(findViewById(R.id.edColor));
         edKilometerage=(EditText)(findViewById(R.id.edKilometerage));
         edNumber=(EditText)(findViewById(R.id.edNunber));
+        edAdrees=(EditText)(findViewById(R.id.edAdrees));
 
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,6 +76,7 @@ public class AddCar extends AppCompatActivity {
         String Kilometerage=edKilometerage.getText().toString();
         Double kilometer=Double.parseDouble(Kilometerage);
         String PhoneNumber=edNumber.getText().toString();
+        String Adrees=edAdrees.getText().toString();
         boolean isOk=true;
 
         if (Tybe.length()<1)
@@ -99,6 +102,10 @@ public class AddCar extends AppCompatActivity {
         {
             edColor.setError("Color length error");
         }
+        if (Adrees.length()<1)
+        {
+            edAdrees.setError("Addres lenght error");
+        }
 
         if (isOk)
         {
@@ -110,9 +117,6 @@ public class AddCar extends AppCompatActivity {
             car.setTybe(Tybe);
             car.setPhoneNumber(PhoneNumber);
             createCar(car);
-
-
-
 
         }
 
@@ -149,5 +153,4 @@ public class AddCar extends AppCompatActivity {
 
 
     }
-
 }
