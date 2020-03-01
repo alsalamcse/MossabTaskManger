@@ -41,7 +41,7 @@ public class AddCar extends AppCompatActivity {
         edModel=(EditText)(findViewById(R.id.edModel));
         edColor=(EditText)(findViewById(R.id.edColor));
         edKilometerage=(EditText)(findViewById(R.id.edKilometerage));
-        edNumber=(EditText)(findViewById(R.id.edNunber));
+        edNumber=(EditText)(findViewById(R.id.edNumber));
         edAdrees=(EditText)(findViewById(R.id.edAdrees));
 
         btnSave.setOnClickListener(new View.OnClickListener() {
@@ -50,21 +50,22 @@ public class AddCar extends AppCompatActivity {
                 dataHandler();
             }
         });
-        btnUpload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+      //  btnUpload.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+          //  public void onClick(View v) {
+
+           // }
+       // });
+      //  btnChoose.setOnClickListener(new View.OnClickListener() {
+         //   @Override
+          //  public void onClick(View v) {
+
 
             }
-        });
-        btnChoose.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+       // });
 
 
-    }
+
 
     public void dataHandler()
     {
@@ -89,7 +90,7 @@ public class AddCar extends AppCompatActivity {
             edModel.setError("Model length error");
             isOk=false;
         }
-        if (PhoneNumber.length()<10)
+        if (PhoneNumber.length()!=10)
         {
             edNumber.setError("PhoneNumber length error");
         }

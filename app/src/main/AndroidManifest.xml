@@ -25,7 +25,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignUP" />
-        <activity android:name=".AddTask" />
         <activity android:name=".Sitting" />
         <activity android:name=".TempAllTaskActivity" />
     </application>
