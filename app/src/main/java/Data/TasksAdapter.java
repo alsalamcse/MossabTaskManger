@@ -151,4 +151,8 @@ public class TasksAdapter extends ArrayAdapter<MyTask>
 
 
     }
+
+    public void add(MyCar car)
+    {
+    }
 }

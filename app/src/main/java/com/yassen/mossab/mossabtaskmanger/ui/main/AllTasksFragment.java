@@ -18,6 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.yassen.mossab.mossabtaskmanger.R;
 
+import Data.MyCar;
 import Data.MyTask;
 import Data.TasksAdapter;
 
@@ -69,9 +70,9 @@ public class AllTasksFragment extends Fragment {
                 tasksAdapte.clear();
                 for (DataSnapshot d:dataSnapshot.getChildren())
                 {
-                    MyTask t=d.getValue(MyTask.class);
-                    Log.d("MyTask",t.toString());
-                    tasksAdapte.add(t);
+                    MyCar car=d.getValue(MyCar.class);
+                    Log.d("MyTask",car.toString());
+                    tasksAdapte.add(car);
                     
                 }
             }

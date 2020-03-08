@@ -27,9 +27,9 @@ public class MainTasksActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Add Task", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Add Car", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                Intent intent=new Intent(getApplication(),AddTask.class);
+                Intent intent=new Intent(getApplication(),AddCar.class);
                 startActivity(intent);
 
             }

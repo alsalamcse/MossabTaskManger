@@ -9,15 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddCar"></activity>
+        <activity android:name=".MyClientsActivity"></activity>
+        <activity android:name=".AddCar" />
         <activity
             android:name=".MainTasksActivity"
             android:label="@string/title_activity_main_tasks"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MossabTaskManger">
-
-        </activity>
-        <activity android:name=".SignIn" >
+        <activity android:name=".MossabTaskManger"></activity>
+        <activity android:name=".SignIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -89,7 +89,18 @@ public class MyCar {
         Adrees = adrees;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "MyCar{" +
+                "key='" + key + '\'' +
+                ", Tybe='" + Tybe + '\'' +
+                ", price='" + price + '\'' +
+                ", Model='" + Model + '\'' +
+                ", Color='" + Color + '\'' +
+                ", Kilometerage='" + Kilometerage + '\'' +
+                ", PhoneNumber='" + PhoneNumber + '\'' +
+                ", owner='" + owner + '\'' +
+                ", Adrees='" + Adrees + '\'' +
+                '}';
+    }
 }
