@@ -4,12 +4,4 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyCarsActivity">
-
-    <ListView
-        android:id="@+id/lvcars"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="89dp"
-        tools:layout_editor_absoluteY="275dp" />
-</android.support.constraint.ConstraintLayout>
+    tools:context=".MyCarsActivity"/>

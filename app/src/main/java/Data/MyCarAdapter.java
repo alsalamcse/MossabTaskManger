@@ -11,17 +11,22 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.yassen.mossab.mossabtaskmanger.R;
+
+import org.w3c.dom.Text;
 
 //1 new class                      //2 extends....
 public class MyCarAdapter extends ArrayAdapter<MyCar>
 {
      //3 fix error
-    public MyCarAdapter(@NonNull Context context, int resource) {
-        super(context, resource);
+    public MyCarAdapter(@NonNull Context context) {
+        super(context,R.layout.car_item);
     }
+
+
 
     //4 override getview
     @NonNull
@@ -34,10 +39,10 @@ public class MyCarAdapter extends ArrayAdapter<MyCar>
         //4.2
         // findviewbyid
         ImageView imageCar=view.findViewById(R.id.imgCar);
-        EditText etPrice=view.findViewById(R.id.etPrice);
-        EditText etType=view.findViewById(R.id.etType);
-        EditText etKilometerage=view.findViewById(R.id.etKilometerage);
-        EditText etDenstance=view.findViewById(R.id.etDenstance);
+        TextView etPrice=view.findViewById(R.id.etPrice);
+        TextView etType=view.findViewById(R.id.etType);
+        TextView etKilometerage=view.findViewById(R.id.etKilometerage);
+        TextView etDenstance=view.findViewById(R.id.etDenstance);
         Button btnDelete=view.findViewById(R.id.btnDelete);
         ImageButton imgPhone=view.findViewById(R.id.imgPhone);
 

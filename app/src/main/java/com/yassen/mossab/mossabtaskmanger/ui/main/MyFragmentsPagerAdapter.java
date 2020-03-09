@@ -19,16 +19,16 @@ public class MyFragmentsPagerAdapter extends FragmentPagerAdapter {
     private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2};
     private final Context mContext;
     //1
-    private AllTasksFragment allTasksFragment;
     private HistoryFragment historyFragment;
     private RemoveFragment removeFragment;
+    private AllCarsFragment allCarsFragment;
 
 
     public MyFragmentsPagerAdapter(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
         //2
-        allTasksFragment= new AllTasksFragment();
+        allCarsFragment=new AllCarsFragment();
         historyFragment=new HistoryFragment();
         removeFragment=new RemoveFragment();
     }
@@ -38,8 +38,9 @@ public class MyFragmentsPagerAdapter extends FragmentPagerAdapter {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
         //3
-        if (position==0)
-            return allTasksFragment;
+      if (position==0){
+          return allCarsFragment;
+      }
         if (position==1)
             return historyFragment;
         if(position==2)

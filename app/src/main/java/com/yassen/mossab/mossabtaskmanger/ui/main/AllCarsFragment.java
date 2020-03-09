@@ -1,10 +1,14 @@
-package com.yassen.mossab.mossabtaskmanger;
+package com.yassen.mossab.mossabtaskmanger.ui.main;
 
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.widget.ArrayAdapter;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -13,36 +17,35 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.yassen.mossab.mossabtaskmanger.R;
 
 import Data.MyCar;
 import Data.MyCarAdapter;
-import Data.MyTask;
 
-//5 new activity
 
-//5.1 add Listview to the xml
-public class MyCarsActivity extends AppCompatActivity {
-
-    //5.2
+public class AllCarsFragment extends Fragment {
     private ListView lvcars;
     private MyCarAdapter myCarAdapter;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_cars);
-
-        //5.3
-        lvcars=findViewById(R.id.lvcars);
-        myCarAdapter=new MyCarAdapter(getBaseContext(),R.layout.car_item);
-
-        //5.4
-        lvcars.setAdapter(myCarAdapter);
+    public AllCarsFragment() {
     }
 
-    //6
+
     @Override
-    protected void onResume() {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState)
+    {
+        myCarAdapter=new MyCarAdapter(getContext());
+       View view= inflater.inflate(R.layout.fragment_all_cars, container, false);
+        lvcars=view.findViewById(R.id.lvcars);
+        lvcars.setAdapter(myCarAdapter);
+
+        return view;
+    }
+
+
+    @Override
+    public void onResume() {
         super.onResume();
         readFromFirebase();
     }
@@ -58,7 +61,7 @@ public class MyCarsActivity extends AppCompatActivity {
         // 5.6 add listener to update us about any change
         // change group name
 
-        reference.child("cars").addValueEventListener(new ValueEventListener() {
+        reference.child("Cars").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
             {

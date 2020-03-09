@@ -80,6 +80,11 @@ public class AddCar extends AppCompatActivity {
         String Adrees=edAdrees.getText().toString();
         boolean isOk=true;
 
+        if (kilometer.equals(0))
+        {
+            edKilometerage.setError("enter kilometer");
+            isOk=false;
+        }
         if (Tybe.length()<1)
         {
             edTybe.setError("Tittle lenght error");
@@ -96,7 +101,7 @@ public class AddCar extends AppCompatActivity {
         }
        if (Price.length()<1)
        {
-            edColor.setError("Price length error");
+            edPrice.setError("Price length error");
             isOk=false;
         }
         if (Color.length()<3)
