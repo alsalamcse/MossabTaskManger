@@ -13,9 +13,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import Data.Client;
-import Data.MyCar;
-import Data.MyClientAdabter;
+import com.yassen.mossab.mossabtaskmanger.Data.Client;
+import com.yassen.mossab.mossabtaskmanger.Data.MyClientAdabter;
 
 //5 new activity
 //5.1 add ListView to the XML

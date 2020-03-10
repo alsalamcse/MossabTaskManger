@@ -1,12 +1,8 @@
 package com.yassen.mossab.mossabtaskmanger;
 
-import android.arch.lifecycle.ViewModelProvider;
-import android.location.Address;
-import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,7 +15,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import Data.MyCar;
+import com.yassen.mossab.mossabtaskmanger.Data.MyCar;
 
 public class AddCar extends AppCompatActivity {
     private ImageView edImage;
@@ -90,7 +86,7 @@ public class AddCar extends AppCompatActivity {
             edTybe.setError("Tittle lenght error");
             isOk=false;
         }
-        if (Model.length()<4)
+        if (Model.length()!=4 )
         {
             edModel.setError("Model length error");
             isOk=false;
@@ -98,6 +94,8 @@ public class AddCar extends AppCompatActivity {
         if (PhoneNumber.length()!=10)
         {
             edNumber.setError("PhoneNumber length error");
+            isOk=false;
+
         }
        if (Price.length()<1)
        {
@@ -107,10 +105,13 @@ public class AddCar extends AppCompatActivity {
         if (Color.length()<3)
         {
             edColor.setError("Color length error");
+            isOk=false;
+
         }
         if (Adrees.length()<1)
         {
             edAdrees.setError("Addres lenght error");
+            isOk=false;
         }
 
         if (isOk)
@@ -141,7 +142,7 @@ public class AddCar extends AppCompatActivity {
 
         String key = reference.child("Cars").push().getKey();
         car.setKey(key);
-        reference.child("Cars").child(uid).child(key).setValue(car).addOnCompleteListener(AddCar.this, new OnCompleteListener<Void>() {
+        reference.child("Cars").child(key).setValue(car).addOnCompleteListener(AddCar.this, new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> car) {
                 if (car.isSuccessful())

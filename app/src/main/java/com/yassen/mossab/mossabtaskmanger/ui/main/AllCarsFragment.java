@@ -1,7 +1,5 @@
 package com.yassen.mossab.mossabtaskmanger.ui.main;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -19,8 +17,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.yassen.mossab.mossabtaskmanger.R;
 
-import Data.MyCar;
-import Data.MyCarAdapter;
+import com.yassen.mossab.mossabtaskmanger.Data.MyCar;
+import com.yassen.mossab.mossabtaskmanger.Data.MyCarAdapter;
 
 
 public class AllCarsFragment extends Fragment {
