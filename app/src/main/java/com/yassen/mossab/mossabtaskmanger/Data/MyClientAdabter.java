@@ -22,13 +22,16 @@ public class MyClientAdabter extends ArrayAdapter<Client>
     public MyClientAdabter(@NonNull Context context, int resource) {
         super(context, resource);
     }
+
     //4 override get view
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent)
     {
+
        //4.1 build item XML view
         View view= LayoutInflater.from(getContext()).inflate(R.layout.client_item,parent,false);
+
         //4.2 findViewById
         ImageView imageView=view.findViewById(R.id.imgCleint);
         ImageButton imgCall=view.findViewById(R.id.imgButtonCall);
