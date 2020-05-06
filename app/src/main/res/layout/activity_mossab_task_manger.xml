@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0A0A0A"
     tools:context=".MossabTaskManger">
 
     <ImageView
-        android:id="@+id/imgv"
-        android:layout_width="152dp"
-        android:layout_height="148dp"
-        android:layout_marginTop="180dp"
+        android:id="@+id/imageView2"
+        android:layout_width="275dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@mipmap/ic_wellcome" />
+        app:layout_constraintVertical_bias="0.499"
+        app:srcCompat="@mipmap/ic_welcome2" />
 </android.support.constraint.ConstraintLayout>

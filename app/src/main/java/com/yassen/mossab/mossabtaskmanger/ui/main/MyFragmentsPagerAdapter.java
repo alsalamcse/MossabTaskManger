@@ -13,7 +13,8 @@ import com.yassen.mossab.mossabtaskmanger.R;
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
  * one of the sections/tabs/pages.
  */
-public class MyFragmentsPagerAdapter extends FragmentPagerAdapter {
+public class MyFragmentsPagerAdapter extends FragmentPagerAdapter
+{
 
     @StringRes
     private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2};

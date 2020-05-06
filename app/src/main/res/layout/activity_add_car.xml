@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0F0F0F"
     tools:context=".AddCar">
 
 
@@ -11,139 +12,132 @@
         android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="88dp"
+        android:background="#FF9800"
         android:text="Save"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="639dp" />
 
     <Button
         android:id="@+id/btnUpload"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="103dp"
-        android:layout_marginBottom="26dp"
+        android:layout_width="86dp"
+        android:layout_height="54dp"
+        android:background="#FF9800"
         android:text="Upload"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/edTybe"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/edImage" />
+        tools:layout_editor_absoluteX="238dp"
+        tools:layout_editor_absoluteY="167dp" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="89dp"
+        android:layout_width="84dp"
+        android:layout_height="55dp"
+        android:background="#FF9800"
         android:text="Choose"
-        app:layout_constraintEnd_toStartOf="@+id/btnUpload"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edImage" />
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="166dp" />
 
     <EditText
         android:id="@+id/edKilometerage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="164dp"
+        android:layout_width="210dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:background="#F8F6F6"
         android:ems="10"
         android:hint="Kilometerage"
         android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edNumber" />
+        tools:layout_editor_absoluteY="511dp" />
 
     <EditText
         android:id="@+id/edTybe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="208dp"
+        android:layout_height="46dp"
 
-        android:layout_marginStart="16dp"
+        android:background="#FCF8F8"
         android:ems="10"
         android:hint="Type"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/edColor"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnUpload" />
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="245dp" />
 
     <EditText
         android:id="@+id/edModel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_width="211dp"
+        android:layout_height="40dp"
 
-        android:layout_marginBottom="15dp"
+        android:layout_marginStart="12dp"
+        android:background="#FDFDFD"
         android:ems="10"
         android:hint="Model"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/edNumber"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edPrice" />
+        tools:layout_editor_absoluteY="405dp" />
 
     <EditText
         android:id="@+id/edPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="210dp"
+        android:layout_height="37dp"
 
 
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="12dp"
+        android:background="#FAF9F9"
         android:ems="10"
         android:hint="Price"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/edModel"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edColor" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.515" />
 
     <EditText
         android:id="@+id/edNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="26dp"
+        android:layout_width="210dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:background="#FDFBFB"
         android:ems="10"
         android:hint="Phone Number"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/edKilometerage"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edModel" />
+        tools:layout_editor_absoluteY="457dp" />
 
     <EditText
         android:id="@+id/edColor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="17dp"
+        android:layout_width="211dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="12dp"
+        android:background="#FCFAFA"
         android:ems="10"
         android:hint="Color"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/edPrice"
-        app:layout_constraintStart_toStartOf="@+id/edTybe"
-        app:layout_constraintTop_toBottomOf="@+id/edTybe" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="303dp" />
 
     <EditText
         android:id="@+id/edAdrees"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="210dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="12dp"
+        android:background="#F8F5F5"
         android:ems="10"
         android:hint="Adrees"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edKilometerage" />
+        tools:layout_editor_absoluteY="563dp" />
 
     <ImageView
         android:id="@+id/edImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="128dp"
+        android:layout_height="131dp"
 
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnUpload"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@mipmap/ic_welcome2_foreground"
+        tools:srcCompat="@mipmap/ic_welcome2" />
 
 </android.support.constraint.ConstraintLayout>
